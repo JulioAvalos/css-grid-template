@@ -12,29 +12,36 @@ body{
     height: 100%;
     grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 3fr [col-2-end];
     grid-template-rows: 4rem minmax(10px, auto) 4rem;
+    grid-template-areas: "header header header"
+                         "sidebar content content"
+                         "footer footer footer";
 }
 
 .header {
     background: rgba(255, 154, 72, 0.5);
-    grid-column-start: col-1-start;
-    grid-column-end: col-2-end;
+    /* grid-column-start: col-1-start; */
+    /* grid-column-end: col-2-end; */
+    grid-area: header;
 }
 
 .content {
     background: rgba(0, 128, 0, 0.5);
-    grid-column-start: col-2-start;
-    grid-column-end: span 1;
+    /* grid-column-start: col-2-start; */
+    /* grid-column-end: span 1; */
+    grid-area: content;
 }
 
 .siderbar {
     background: rgba(255, 0, 0, 0.5);
-    grid-column-start: col-1-start;
-    grid-row-start: 2;
-    grid-row-end: span 1;
+    /* grid-column-start: col-1-start; */
+    /* grid-row-start: 2; */
+    /* grid-row-end: span 1; */
+    grid-area: sidebar;
 }
 
 .footer {
     background: rgba(0, 4, 255, 0.5);
-    grid-column-start: col-1-start;
-    grid-column-end: col-2-end;
+    /* grid-column-start: col-1-start; */
+    /* grid-column-end: col-2-end; */
+    grid-area: footer;
 }
